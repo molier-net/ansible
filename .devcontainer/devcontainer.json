@@ -1,0 +1,36 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/debian
+{
+	"name": "Ansible",
+	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
+	"build": {
+        "dockerfile": "Dockerfile"
+    },
+	// Features to add to the dev container. More info: https://containers.dev/features.
+    "features": {
+        "ghcr.io/devcontainers/features/docker-in-docker:2": {}
+    },
+    // Use 'forwardPorts' to make a list of ports inside the container available locally.
+    // "forwardPorts": [],
+    // Configure tool-specific properties.
+    "customizations": {
+        "vscode": {
+            // Set *default* container specific settings.json values on container create.
+            "settings": {
+                "editor.formatOnPaste": true, // required
+                "editor.formatOnType": true, // required
+                "editor.formatOnSave": true, // optional
+                "editor.formatOnSaveMode": "file", // required to format on save
+                "files.autoSave": "off" // optional but recommended
+            },
+            // Add the IDs of extensions you want installed when the container is created.
+            "extensions": [
+                "ms-azuretools.vscode-docker",
+				"task.vscode-task"
+			]
+		}
+	}
+
+	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
+	// "remoteUser": "root"
+}
